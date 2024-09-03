@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(24, 24, 69);
+        }
+
+        .section{
+           background-color: rgb(255, 205, 255);
+           display: flex;
+           flex-direction: column;
+           display: inline-block;
+           padding: 40px 50px;
+           margin-top: 200px;
+        }
+        input{
+            margin: 10px;
+            border-radius: 5px;
+            width: 180px;
+            height: 30px;
+            border: 2px solid rgb(24, 24, 69);
+            
+        }
+        button{
+            width: 120px;
+            height: 30px;
+            border-radius: 5px;
+            background-color:   rgb(249, 166, 249);
+            margin: 20px 40px;
+            font-size: 16px;
+        }
+        button:hover{
+            background-color:rgb(208, 252, 141);
+        }
+        h3,p,i{
+            color: white;
+            font-size: 35px;
+        }
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    
+       
+      <section class="container">
+        <section class="section">
+            
+               <div class="name">
+                
+                <input type="text" value="" placeholder="Full Name "> <br>
+               </div>
+
+
+               <div class="email">
+                
+                <input type="email" value="" placeholder="Email"> <br>
+               </div>
+    
+                <div class="url">
+                    
+                <input type="url" value="" placeholder="URL"> <br>
+                </div>
+    
+               <div class="address">
+                
+                <input type="text" value="" placeholder="Address"> <br>
+               </div>
+    
+                <button onclick="ShowData()">Submit</button>
+           
+        </section>
+       <section clss="section2">
+        <h3>Name</h3>
+        <p>name@gmail.com</p>
+        <img src="" alt="">
+        <p><i>Pune Deccan</i></p>
+       </section>
+      </section>
+    
+      
+
+
+       <script>
+        function ShowData(){
+            let name = document.getElementsByTagName('input')[0].value           
+            let email = document.getElementsByTagName('input')[1].value          
+            let url = document.getElementsByTagName('input')[2].value          
+            let address = document.getElementsByTagName('input')[3].value
+           
+            document.getElementsByTagName('h3')[0].innerText = name
+            document.getElementsByTagName('p')[0].innerText = email
+            document.getElementsByTagName('img')[0].src = url
+            document.getElementsByTagName('i')[0].innerText = address
+       
+        }
+       </script>
+</body>
+</html>

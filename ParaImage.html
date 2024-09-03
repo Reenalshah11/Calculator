@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .paragraph{
+            display: flex;
+            flex-direction: column;
+            width: 800px;
+            height: 300px; 
+       }
+       p{
+        margin: 80px 0px;
+        font-size: 20px;
+       }
+       .para1{
+        color: skyblue;
+       }
+       .para2{
+        color: rgb(255, 106, 51);
+       }
+       .para3{
+        color: rgb(236, 183, 250);
+       }
+       img{
+        width: 150px;
+        height: 150px;
+        border-radius: 40px ;
+        margin: 20px 0px;
+       }
+       .container{
+        display: flex;
+        justify-content: space-around;
+       
+       }
+       
+    </style>
+</head>
+<body>
+  <section class="container">
+    <section class="paragraph">
+        <div class="para1">
+            <p onclick="display1()">https://files.worldwildlife.org/wwfcmsprod/images/Top_Shot_Borneo_travel_blog/priority_species_small/1ire4u2yam_PC188.JPG</p>
+        </div>
+        <div class="para2">
+            <p onclick="display2()">https://img.freepik.com/premium-photo/painting-cat-named-king-jungle_928869-1943.jpg</p>
+        </div>
+        <div class="para3">
+            <p onclick="display3()">https://tinypng.com/images/social/website.jpg</p>
+        </div>
+      </section>
+    
+      <section class="images">
+        <div class="photos1">
+            <img src=""  alt="">
+        </div>
+        <div class="photos2">
+            <img src="" alt="">
+        </div>
+        <div class="photos3">
+            <img src="" alt="">
+        </div>
+      </section>
+  </section>
+<script>
+    function display1(){
+        let para1=document.getElementsByTagName('p')[0].innerText
+        document.getElementsByTagName('img')[0].src = para1      
+    }
+    function display2(){
+        let para2=document.getElementsByTagName('p')[1].innerText
+        document.getElementsByTagName('img')[1].src = para2
+    }
+    function display3(){
+        let para3=document.getElementsByTagName('p')[2].innerText
+        document.getElementsByTagName('img')[2].src = para3
+    }
+</script>
+
+</body>
+</html>

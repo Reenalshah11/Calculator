@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+            height: 300px;
+        }
+        .image2{
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-8dyOG8Av2-HiM5Qw7sHhDW-zMHhAWt2sAg&s" alt="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDAbkqqDnHUBnXArC77TR5TmHgSMA9tiKoTmXljCSvBhdRpkqClweOPEBIEA4jnq3hxlA&usqp=CAU" alt="" class="image2">
+            <button onclick="bulbOn()">On</button>
+            <button onclick="bulbOff()">Off</button>
+        </div>
+    </section>
+    <script>
+        function bulbOn() {
+            document.getElementsByTagName('img')[0].style.display = 'none'  
+            document.getElementsByTagName('img')[1].style.display = 'block'
+        }
+
+        function bulbOff() {
+            document.getElementsByTagName('img')[0].style.display = 'block'  
+            document.getElementsByTagName('img')[1].style.display = 'none'
+        }
+    </script>
+</body>
+</html>

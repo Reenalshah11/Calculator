@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: flex;
+            justify-content: center;
+
+        }
+
+
+        .digits {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        button {
+            width: 70px;
+            height: 40px;
+            background-color: rgb(189, 217, 242);
+            border-radius: 20px;
+            margin: 4px;
+            font-size: 20px;
+            font-weight: 600;
+            border: none;
+        }
+
+        button:hover {
+            background-color: rgb(206, 228, 160);
+        }
+
+        p {
+            width: 300px;
+            height: 40px;
+            background-color: rgb(189, 217, 242);
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: right;
+            font-weight: 600;
+            margin: 5px;
+            font-size: 20px;
+
+        }
+
+        .sect {
+            display: flex;
+            flex-direction: column;
+            margin-top: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="sect">
+        <section>
+            <p></p>
+        </section>
+
+        <section>
+            <p></p>
+        </section>
+        <section>
+
+            <div class="numbers">
+                <div class="digits">
+                    <button onclick="displayNumb9()">9</button>
+                    <button onclick="displayNumb8()">8</button>
+                    <button onclick="displayNumb7()">7</button>
+                </div>
+                <div class="digits">
+                    <button onclick="displayNumb6()">6</button>
+                    <button onclick="displayNumb5()">5</button>
+                    <button onclick="displayNumb4()">4</button>
+                </div>
+                <div class="digits">
+                    <button onclick="displayNumb3()">3</button>
+                    <button onclick="displayNumb2()">2</button>
+                    <button onclick="displayNumb1()">1</button>
+                </div>
+
+                <div class="digits">
+                    <button onclick="displayNumb0()">0</button>
+                    <button onclick="displayNumb()">.</button>
+                    <button onclick="getOperation(innerText)">=</button>
+                </div>
+            </div>
+            <div class="operators">
+
+            </div>
+            <div class="operation">
+                <div class="add">
+                    <button onclick="displayNumba()">+</button>
+                </div>
+                <div class="sub">
+                    <button onclick="displayNumbs()">-</button>
+                </div>
+                <div class="mult">
+                    <button onclick="displayNumbm()">x</button>
+                </div>
+                <div class="divide">
+                    <button onclick="displayNumbd()">/</button>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script>
+        function displayNumb9() {
+            let num9 = document.getElementsByTagName('button')[0].innerText
+            document.getElementsByTagName('p')[0].innerText = num9
+            console.log(num9);
+        }
+
+        function displayNumb8() {
+            let num8 = document.getElementsByTagName('button')[1].innerText
+            document.getElementsByTagName('p')[0].innerText = num8
+            console.log(num8);
+        }
+
+        function displayNumb7() {
+            let num7 = document.getElementsByTagName('button')[2].innerText
+            document.getElementsByTagName('p')[0].innerText = num7
+            console.log(num7);
+        }
+        function displayNumb6() {
+            let num6 = document.getElementsByTagName('button')[3].innerText
+            document.getElementsByTagName('p')[0].innerText = num6
+            console.log(num6);
+        }
+
+        function displayNumb5() {
+            let num5 = document.getElementsByTagName('button')[4].innerText
+            document.getElementsByTagName('p')[0].innerText = num5
+            console.log(num5);
+        }
+
+        function displayNumb4() {
+            let num4 = document.getElementsByTagName('button')[5].innerText
+            document.getElementsByTagName('p')[0].innerText = num4
+            console.log(num4);
+        }
+
+        function displayNumb3() {
+            let num3 = document.getElementsByTagName('button')[6].innerText
+            document.getElementsByTagName('p')[0].innerText = num3
+            console.log(num3);
+        }
+
+        function displayNumb2() {
+            let num2 = document.getElementsByTagName('button')[7].innerText
+            document.getElementsByTagName('p')[0].innerText = num2
+            console.log(num2);
+
+        }
+
+        function displayNumb1() {
+            let num1 = document.getElementsByTagName('button')[8].innerText
+            document.getElementsByTagName('p')[0].innerText = num1
+            console.log(num1);
+        }
+
+        function displayNumb0() {
+            let num0 = document.getElementsByTagName('button')[9].innerText
+            document.getElementsByTagName('p')[0].innerText = num0
+            console.log(num0);
+        }
+
+        function displayNumb() {
+            let numdot = document.getElementsByTagName('button')[10].innerText
+            document.getElementsByTagName('p')[0].innerText = numdot
+            console.log(numdot);
+        }
+
+        function displayNumba() {
+            let add = document.getElementsByTagName('button')[12].innerText
+            document.getElementsByTagName('p')[0].innerText = add
+            console.log(add);
+        }
+
+        function displayNumbs() {
+            let sub = document.getElementsByTagName('button')[13].innerText
+            document.getElementsByTagName('p')[0].innerText = sub
+            console.log(sub);
+        }
+
+        function displayNumbm() {
+            let mult = document.getElementsByTagName('button')[14].innerText
+            document.getElementsByTagName('p')[0].innerText = mult
+            console.log(mult);
+        }
+
+        function displayNumbd() {
+            let div = document.getElementsByTagName('button')[15].innerText
+            document.getElementsByTagName('p')[0].innerText = div
+            console.log(div);
+        }
+
+        function getOperation(res) {
+
+            let invalid = 'Enter correct operand or operator';
+            let op;
+            let a, b;
+            switch ('-') {
+                case '+': res = a + b;
+                    console.log('hello');
+                    break;
+
+                case '-': 
+                console.log('Minus');
+                    break;
+
+                case '*': return a * b;
+                    break;
+
+                case '/': return a / b;
+                    break;
+
+                default: document.getElementsByTagName('p')[1].innerText = invalid
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

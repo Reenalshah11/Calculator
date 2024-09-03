@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display: flex;
+           justify-content: space-around;
+           
+        }
+        select{
+            margin: 20px;
+            width: 200px;
+            height: 40px;
+            
+        }
+        input{
+            width: 200px;
+            height: 40px;
+        }
+        .box1{
+            display: flex;
+            flex-direction: column;
+            
+            background-color: rgb(175, 236, 100);
+        }
+        .box2{
+            width: 300px;
+            height: 600px;
+            background-color: rgb(175, 236, 100);
+            color: white;
+        }
+        img{
+            border-radius: 100px;
+            width: 200px;
+        }
+        
+    </style>
+</head>
+<body>
+   <section>
+   <div class="box1">
+    <select name="" id="" onchange="showData(value)">
+        <option value="">-- Gender --</option>
+
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <br> <br>
+    </select>
+
+    <input type="text" placeholder="Enter Full Name" > <br>
+    <input type="email" placeholder="Enter Email">  <br>
+    <input type="date" placeholder="Enter Date of Birth">   <br>
+    <input type="text" placeholder="Enter Address"> <br>
+    <input type="text" placeholder="Enter Pan number">    <br>
+    <input type="text" placeholder="Enter Aadhar number"> <br>
+    <input type="url" placeholder="Enter Url"> <br>
+
+    <button onclick="showData()">Submit</button>
+   </div>
+
+   <div class="box2">
+    <p></p>
+   
+    <h4></h4>
+    <h4></h4>
+    <h4></h4>
+    <h4></h4>
+    <h4></h4>
+    <h4></h4>
+    <img src="" alt="">
+   </div>
+   </section>
+
+   <script>
+    function showData(inpVal){
+     inpVal = document.getElementsByTagName('select')[0].value
+    
+    let name = document.getElementsByTagName('input')[0].value
+    let email = document.getElementsByTagName('input')[1].value
+    let date = document.getElementsByTagName('input')[2].value
+    let address = document.getElementsByTagName('input')[3].value
+    let pan = document.getElementsByTagName('input')[4].value
+    let aadhar = document.getElementsByTagName('input')[5].value
+    let image = document.getElementsByTagName('input')[6].value
+
+    
+    document.getElementsByTagName('p')[0].innerText = inpVal 
+  
+    document.getElementsByTagName('h4')[0].innerText = name
+    document.getElementsByTagName('h4')[1].innerText = email
+    document.getElementsByTagName('h4')[2].innerText = date
+    document.getElementsByTagName('h4')[3].innerText = address
+    document.getElementsByTagName('h4')[4].innerText = pan
+    document.getElementsByTagName('h4')[5].innerText = aadhar
+    document.getElementsByTagName('img')[0].src = image
+    
+
+}
+   </script>
+</body>
+</html>

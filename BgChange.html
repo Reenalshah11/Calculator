@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display:flex ;
+            flex-direction: column;  
+            margin-top: 250px;       
+        }
+        
+        button{
+            width: 100px;
+            height: 40px;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 10px;
+            margin: 10px;
+            
+        }
+       
+    </style>
+</head>
+<body>
+ <center>
+    <section>
+        <div class="btn1">
+            <button onclick="getRed()">Red</button>
+            <button onclick="getBlue()">Blue</button>
+            <button onclick="getYellow()">Yellow</button>
+            <button onclick="getGreen()">Green</button>
+            <button onclick="getOrange()">Orange</button>
+        </div>
+    
+        <div class="btn2">
+            <button onclick="getPink()">Pink</button>
+            <button onclick="getBlack()">Black</button>
+            <button onclick="getBeige()">Beige</button>
+            <button onclick="getGray()">Gray</button>
+            <button onclick="getBrown()">Brown</button>
+        </div>
+       </section>
+ </center>
+
+<script>
+    function getRed(){
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'red'
+        console.log('Red');
+    }
+
+    function getBlue(){
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'blue'
+        console.log('Blue');
+    }
+
+    function getYellow(){
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'yellow'
+        console.log('Yellow');
+    }
+
+    function getGreen(){
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'green'
+        console.log('Green');
+    }
+
+    function getOrange(){
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'orange'
+        console.log('Orange');
+    }
+
+    function getPink(){
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'pink'
+        console.log('Pink');
+    }
+
+    function getBlack(){
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'black'
+        console.log('Black');
+    }
+
+    function getBeige(){
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'beige'
+        console.log('Beige');
+    }
+
+    function getGray(){
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'gray'
+        console.log('Gray');
+    }
+
+    function getBrown(){
+        document.getElementsByTagName('body')[0].style.backgroundColor = 'brown'
+        console.log('Brown');
+    }
+</script>
+
+</body>
+</html>

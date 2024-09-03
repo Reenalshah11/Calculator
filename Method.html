@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(141, 178, 246);
+        }
+        section{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 250px;
+        }
+        textarea{
+            width: 300px;
+            height: 200px;
+            background-color:rgb(247, 247, 186) ;
+            border-radius: 10px;
+        }
+        select{
+            width: 150px;
+            height: 35px;
+            background-color:rgb(247, 247, 186) ;
+            margin-left: 80px;
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+        <section>
+            <div class="text">
+                <textarea name="" id="">And there's a woman. A woman I love...and I got close. I nearly got everything.</textarea>
+
+            </div>
+            <div class="method1">
+                <textarea name="" id="" onclick="getText()"></textarea>
+                <br> <br> <br>
+
+                <select name="" id="" onchange="getReplace(value)" >
+                    <option value="">-- Select method --</option>
+                    <option value="Replace">Replace</option>
+                    <option value="ReplaceAll">ReplaceAll</option>
+                </select>
+
+            </div>
+        </section>
+
+        <script>
+
+            function getText(){
+                let name = document.getElementsByTagName('textarea')[0].innerText  
+                document.getElementsByTagName('textarea')[1].innerText = name
+
+            }
+
+            function getReplace(inpVal){
+                let para = document.getElementsByTagName('textarea')[0].innerText 
+                document.getElementsByTagName('textarea')[1].innerText = para
+                console.log(str.indexOf('inpVal'));
+
+            }
+
+            
+        </script>
+
+</body>
+</html>
