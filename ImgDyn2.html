@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 250px;
+        }
+        .box1{
+            width: 400px;
+            height: 450px;
+            background-color: rgb(236, 231, 152);
+            text-align: center;
+            
+        }
+        .box2{
+            width: 400px;
+            height: 450px;
+            background-color: rgb(245, 190, 245);
+        }
+        input{
+            width: 150px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+           
+        }
+        select{
+           
+            width: 150px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            background-color: black;
+            margin: 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+        
+        }
+
+        button{
+            width: 150px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            background-color:gray;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        button:hover{
+            background-color: rgb(95, 93, 93);
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+   <section>
+    <div class="box1">
+        <input type="text" placeholder="Enter option name" name="" id="optionName"> <br><br>
+        <input type="url" placeholder="Enter URL" name="" id="url"> <br><br>
+
+        <button onclick="createOption()">Add Option</button> <br><br>
+        <select name="" id="select" onchange="displayImg()" value="">
+            <option value="">--- Choose Option ---</option>
+        </select>
+        <br><br>
+       
+       </div>
+    <div class="box2">
+        <h1></h1>
+        <img src="" alt="">
+    </div>
+   </section>
+
+   <script>
+   function createOption(){
+            // let optName =  document.getElementById('optionName').value
+            // document.getElementById('select').innerHTML += `<option value ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXJA32WU4rBpx7maglqeEtt3ot1tPIRWptxA&s" id="opt">${optName
+            //     }</option>`
+
+            let optName =  document.getElementById('optionName').value
+            document.getElementById('select').innerHTML += `
+            <option value ="${url}" id="opt">${optName}</option>
+            `
+            // let url =  document.getElementById('url').value
+            // document.getElementById('select').innerHTML += `<option id="link"  >
+            //     </option>`
+        }
+        function displayImg(){
+            let display = document.getElementById('opt').value
+            document.getElementsByTagName('img')[0].src = display
+
+            let text = document.getElementById('opt').innerText
+            document.getElementsByTagName('h1')[0].innerText = text
+        }
+   </script>
+</body>
+</html>

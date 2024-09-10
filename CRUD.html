@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        section{
+            display: flex;
+            justify-content: space-around;
+        }
+        .head{
+            background-color:orangered;
+            color: white;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+        input{
+            width: 250px;
+            height: 35px;
+            color: white;
+            border-radius: 10px;
+            border: 2px solid orangered;
+            background-color:black;
+        }
+        input:hover{
+            border: 2px solid skyblue;
+        }
+        table{
+            width: 100%;
+            color: white;
+            
+           
+        }
+        th{
+            width: 100%;
+            color: white;
+            border: 1px solid orangered;
+            padding: 10px;
+        }
+        .btn{
+            width: 150px;
+            height: 35px;
+            color: white;
+            border-radius: 10px;
+            border: 2px solid orangered;
+            background-color:black;
+            margin-left: 50px;
+            font-weight: 600;
+        }
+        .btn:hover{
+            background-color: orangered;     
+            cursor: pointer;   
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box">
+            <h1 class="head">Create Employee</h1>
+            <input type="text" placeholder="Enter Name" id="empName"> <br><br><br>
+            <input type="text" placeholder="Enter Email" id="empEmail"> <br><br><br>
+            <input type="text" placeholder="Enter Role" id="empRole"> <br><br><br>
+            <input type="text" placeholder="Enter Salary" id="empSalary"> <br><br><br>
+            <input type="text" placeholder="Enter Contact" id="empContact"> <br><br><br>
+            <input type="text" placeholder="Enter Address" id="empAddress"> <br><br><br>
+            <button class="btn" onclick="showData()">Add to List</button>
+        </div>
+        <div class="box">
+            <table>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>R0LE</th>
+                <th>SALARY</th>
+                <th>PHONE</th>
+                <th>ADDRESS</th>
+                <th>ACTION</th>
+            </table>
+            <tbody>
+
+            </tbody>
+        </div>
+        <div class="box">
+            <h1 class="head">Update Employee</h1>
+            <input type="text" placeholder="Enter Name"> <br><br><br>
+            <input type="text" placeholder="Enter Email"> <br><br><br>
+            <input type="text" placeholder="Enter Role"> <br><br><br>
+            <input type="text" placeholder="Enter Salary"> <br><br><br>
+            <input type="text" placeholder="Enter Contact"> <br><br><br>
+            <input type="text" placeholder="Enter Address"> <br><br><br>
+            <button class="btn">Add to List</button>
+        </div>
+    </section>
+    <script>
+        function showData(){
+
+        }
+    </script>
+</body>
+</html>

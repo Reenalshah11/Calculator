@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <input type="text" placeholder="Enter Name">
+        <button onclick="addOpt()">+</button>
+        
+         <br><br><br>
+         <select name="" id="">
+            <option value="">-- Select type</option>
+            <option value="text">text</option>
+            <option value="number">number</option>
+            <option value="password">password</option>
+            <option value="date">date</option>
+         </select>
+        <input type="text" placeholder="Enter Email"> <br><br><br>
+        <input type="text" placeholder="Enter Password"> <br><br><br>
+        <button>Submit</button>
+    </section>
+    <script>
+        function addOpt(){
+            let add = document.getElementsByTagName('button')[0].value
+        document.getElementsByTagName('section')[0].innerHTML +=`
+        <input type="text">      
+        `
+
+
+        }
+
+    </script>
+</body>
+</html>
